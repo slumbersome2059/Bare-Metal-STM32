@@ -1,4 +1,4 @@
-#include <stdint.h>
+#include <inttypes.h>
 const int GPIO_BANK_NUMBER = 5;
 
 
@@ -86,33 +86,6 @@ int main(void){
     return 0;
 }
 
-
-/*
-//base address define karna 
-#define RCC_BASE 0x40021000
-#define GPIO_BASE 0x50000000
-//Register ka exact address banana(base+offset)
-#define RCC_IOPENR (*(volatile unsigned int *) (RCC_BASE + 0x34))
-#define GPIO_MODER (*(volatile unsigned int *) (GPIO_BASE + 0x00))
-#define GPIO_ODR (*(volatile unsigned int *) (GPIO_BASE + 0x14))
-int main(void) {
-//step3 power on
-//bit ko ON karne ke liye bitwise OR(|=) aur left shift (<<) use karte hai
-RCC_IOPENR|=(1<<0);
-//ab moder ki bit 11 ko 0 or 10 ko 1 karna hai 
-GPIO_MODER &= (unsigned int)(~(1<<11));
-GPIO_MODER |=(unsigned int)(1<<10);
-while (1) {  //ye ek infinit loop hai isme hi kaam infinitely repeat hoga most imp
-  GPIO_ODR |=(unsigned int)(1<<5);
-  for(int i=0; i < 5000000; i++); // ye bas MCU ka time paas karvta hai ise ham abhi use kar rahe hai fir proper interupt,timer ya sabse best DMA use karenge
-  GPIO_ODR &= (unsigned int)(~(1<<5));
-  for(int i=0; i < 3000000; i++);
-}
-
-
-}
-
-*/
 //Startup Code
 extern long _startDataRAM, _endDataRAM, _startDataFLASH, _startBSS, _endBSS;
 
@@ -122,7 +95,7 @@ This is stuff that needs to be stored in non-volatile memory so that its durable
 but to be used by MCU when chip is booted it needs to be in RAM.
 */
 
-__attribute__((naked, noreturn)) void _reset(void){
+__attribute__((noreturn)) void _reset(void){
     /*
     naked means no function epilogue(restores stack for parent) and no function prologue(this is where stack is set up eg required number of bytes for variables allocated)    
     you use this when you want to write function in assembly code(you can't use any local variables or if statements inside function because of naked)

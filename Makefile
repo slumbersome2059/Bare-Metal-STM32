@@ -11,7 +11,7 @@ SOURCES = main.c
 
 build: firmware.elf
 
-firmware.elf: $(SOURCES)
+firmware.elf: $(SOURCES) link.ld
 	arm-none-eabi-gcc $(SOURCES) $(CFLAGS) $(LDFLAGS) -o $@
 
 # It is enough to make firmware.bin because using Wokwi for simulation
