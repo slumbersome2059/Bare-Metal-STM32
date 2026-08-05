@@ -23,16 +23,29 @@ MEMORY{
 /*
 The rx and rwx specify permissions.
 */
-    flash(rx): ORIGIN = 0x08000000, LENGTH = 32k
-    sram(rwx): ORIGIN = 0x20000000, LENGTH = 12k
+    flash(rx) : ORIGIN = 0x08000000, LENGTH = 32k
+    sram(rwx) : ORIGIN = 0x20000000, LENGTH = 12k
 }
 /*The stack points where sram ends*/
 _estack = ORIGIN(sram) + LENGTH(sram);
 
 SECTIONS {
-    .vectors : {* (.vectors)} > flash
-    .text : {* (.text*)} > flash
-    .rodata : {* (.rodata*)} > flash /* rodata is not stored in RAM for space */
+    .vectors : {
+        . = ALIGN(4);
+        KEEP(*(.vectors))
+        . = ALIGN(4);    
+    } > flash
+    .text : {
+        . = ALIGN(4);
+        *(.text) /* Pretty confident this is unnecessary and below line captures */
+        *(.text*)
+        . = ALIGN(4);
+    } > flash
+    .rodata : {
+        . = ALIGN(4);
+        *(.rodata*)
+        . = ALIGN(4);
+    } > flash /* rodata is not stored in RAM for space */
     /* 
     Each of the LHS is creating a section in the output file called that secname
     and taking from all the files(what the * does) the code in specified section inside
@@ -42,8 +55,9 @@ SECTIONS {
     */
     .data : {
         /* data section holds initialised global variables */
+        . = ALIGN(4);
         _startDataRAM = .;/* Semicolon must follow an assignment */
-        * (.firstData)
+        *(.firstData)
         *(.data SORT(.data.*)) /*
         - Sometimes you can specify to compile code 
         so that each variable is in its own section which makes it easier to remove
@@ -52,6 +66,7 @@ SECTIONS {
         get's added in a consistent order no matter which order files processed
         - .data is added first and then these .data.* sections added
         */
+        . = ALIGN(4); 
         _endDataRAM = .;
     } > sram AT > flash
     _startDataFLASH = LOADADDR(.data);
@@ -69,9 +84,11 @@ SECTIONS {
     - Currently nothing in code uses .firstData as a section so it just gets ignored
     */
     .bss : {/* unitialised global variables will be given 0 by default*/
+        . = ALIGN(4);
         _startBSS = .;
         *(.bss SORT(.bss.*)) /* this and next line have same meaning as above with the data*/
         
+        . = ALIGN(4);
         _endBSS = .;
     } > sram 
     /*
