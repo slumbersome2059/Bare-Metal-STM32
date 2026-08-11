@@ -1,35 +1,35 @@
 Archive member included to satisfy reference by file (symbol)
 
 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
-                              /tmp/ccs1irLd.o (memset)
+                              /tmp/ccuu9AQ3.o (memset)
 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
-                              /tmp/ccs1irLd.o (memcpy)
+                              /tmp/ccuu9AQ3.o (memcpy)
 
 Discarded input sections
 
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .group         0x00000000        0xc /tmp/ccs1irLd.o
- .text          0x00000000        0x0 /tmp/ccs1irLd.o
- .data          0x00000000        0x0 /tmp/ccs1irLd.o
- .bss           0x00000000        0x0 /tmp/ccs1irLd.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .group         0x00000000        0xc /tmp/ccuu9AQ3.o
+ .text          0x00000000        0x0 /tmp/ccuu9AQ3.o
+ .data          0x00000000        0x0 /tmp/ccuu9AQ3.o
+ .bss           0x00000000        0x0 /tmp/ccuu9AQ3.o
  .text.timerExpire
-                0x00000000       0x1e /tmp/ccs1irLd.o
+                0x00000000       0x1e /tmp/ccuu9AQ3.o
  .rodata.SYS_TICKp
-                0x00000000        0x4 /tmp/ccs1irLd.o
+                0x00000000        0x4 /tmp/ccuu9AQ3.o
  .rodata.RCC_BASE
-                0x00000000        0x4 /tmp/ccs1irLd.o
+                0x00000000        0x4 /tmp/ccuu9AQ3.o
  .rodata.GPIO_BANK_NUMBER
-                0x00000000        0x4 /tmp/ccs1irLd.o
+                0x00000000        0x4 /tmp/ccuu9AQ3.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
@@ -44,7 +44,7 @@ sram             0x20000000         0x00003000         xrw
 
 Linker script and memory map
 
-LOAD /tmp/ccs1irLd.o
+LOAD /tmp/ccuu9AQ3.o
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a
 LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/nofp/libgcc.a
                 0x20003000                        _estack = (ORIGIN (sram) + LENGTH (sram))
@@ -52,140 +52,140 @@ LOAD /usr/lib/gcc/arm-none-eabi/13.2.1/thumb/nofp/libgcc.a
 .vectors        0x08000000       0xbc
                 0x08000000                        . = ALIGN (0x4)
  *(.vectors)
- .vectors       0x08000000       0xbc /tmp/ccs1irLd.o
+ .vectors       0x08000000       0xbc /tmp/ccuu9AQ3.o
                 0x08000000                tab
                 0x080000bc                        . = ALIGN (0x4)
 
-.text           0x080000bc      0x260
+.text           0x080000bc      0x240
                 0x080000bc                        . = ALIGN (0x4)
  *(.text*)
  .text.systickHandler
-                0x080000bc       0x10 /tmp/ccs1irLd.o
+                0x080000bc       0x10 /tmp/ccuu9AQ3.o
                 0x080000bc                systickHandler
  .text.systickInit
-                0x080000cc       0x28 /tmp/ccs1irLd.o
+                0x080000cc       0x28 /tmp/ccuu9AQ3.o
                 0x080000cc                systickInit
  .text.startup.main
-                0x080000f4       0x94 /tmp/ccs1irLd.o
+                0x080000f4       0x74 /tmp/ccuu9AQ3.o
                 0x080000f4                main
- .text._reset   0x08000188       0x54 /tmp/ccs1irLd.o
-                0x08000188                _reset
- .text          0x080001dc       0xb0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
-                0x080001dc                memset
- .text          0x0800028c       0x90 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
-                0x0800028c                memcpy
-                0x0800031c                        . = ALIGN (0x4)
+ .text._reset   0x08000168       0x54 /tmp/ccuu9AQ3.o
+                0x08000168                _reset
+ .text          0x080001bc       0xb0 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
+                0x080001bc                memset
+ .text          0x0800026c       0x90 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+                0x0800026c                memcpy
+                0x080002fc                        . = ALIGN (0x4)
 
-.glue_7         0x0800031c        0x0
- .glue_7        0x0800031c        0x0 linker stubs
+.glue_7         0x080002fc        0x0
+ .glue_7        0x080002fc        0x0 linker stubs
 
-.glue_7t        0x0800031c        0x0
- .glue_7t       0x0800031c        0x0 linker stubs
+.glue_7t        0x080002fc        0x0
+ .glue_7t       0x080002fc        0x0 linker stubs
 
-.vfp11_veneer   0x0800031c        0x0
- .vfp11_veneer  0x0800031c        0x0 linker stubs
+.vfp11_veneer   0x080002fc        0x0
+ .vfp11_veneer  0x080002fc        0x0 linker stubs
 
-.v4_bx          0x0800031c        0x0
- .v4_bx         0x0800031c        0x0 linker stubs
+.v4_bx          0x080002fc        0x0
+ .v4_bx         0x080002fc        0x0 linker stubs
 
-.iplt           0x0800031c        0x0
- .iplt          0x0800031c        0x0 /tmp/ccs1irLd.o
+.iplt           0x080002fc        0x0
+ .iplt          0x080002fc        0x0 /tmp/ccuu9AQ3.o
 
-.rel.dyn        0x0800031c        0x0
- .rel.iplt      0x0800031c        0x0 /tmp/ccs1irLd.o
+.rel.dyn        0x080002fc        0x0
+ .rel.iplt      0x080002fc        0x0 /tmp/ccuu9AQ3.o
 
-.rodata         0x0800031c        0x0
-                0x0800031c                        . = ALIGN (0x4)
+.rodata         0x080002fc        0x0
+                0x080002fc                        . = ALIGN (0x4)
  *(.rodata*)
-                0x0800031c                        . = ALIGN (0x4)
+                0x080002fc                        . = ALIGN (0x4)
 
-.data           0x20000000        0x8 load address 0x0800031c
+.data           0x20000000        0x8 load address 0x080002fc
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _startDataRAM = .
  *(.firstData)
  *(.data SORT_BY_NAME(.data.*))
  .data.RCC_IOPENR
-                0x20000000        0x4 /tmp/ccs1irLd.o
+                0x20000000        0x4 /tmp/ccuu9AQ3.o
                 0x20000000                RCC_IOPENR
- .data.on.0     0x20000004        0x1 /tmp/ccs1irLd.o
+ .data.on.0     0x20000004        0x1 /tmp/ccuu9AQ3.o
                 0x20000008                        . = ALIGN (0x4)
  *fill*         0x20000005        0x3 
                 0x20000008                        _endDataRAM = .
-                0x0800031c                        _startDataFLASH = LOADADDR (.data)
+                0x080002fc                        _startDataFLASH = LOADADDR (.data)
 
-.igot.plt       0x20000008        0x0 load address 0x08000324
- .igot.plt      0x20000008        0x0 /tmp/ccs1irLd.o
+.igot.plt       0x20000008        0x0 load address 0x08000304
+ .igot.plt      0x20000008        0x0 /tmp/ccuu9AQ3.o
 
-.bss            0x20000008        0x4 load address 0x08000324
+.bss            0x20000008        0x4 load address 0x08000304
                 0x20000008                        . = ALIGN (0x4)
                 0x20000008                        _startBSS = .
  *(.bss SORT_BY_NAME(.bss.*))
- .bss.s_ticks   0x20000008        0x4 /tmp/ccs1irLd.o
+ .bss.s_ticks   0x20000008        0x4 /tmp/ccuu9AQ3.o
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _endBSS = .
 OUTPUT(build/firmware.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000      0x8bf
- .debug_info    0x00000000      0x638 /tmp/ccs1irLd.o
- .debug_info    0x00000638      0x135 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
- .debug_info    0x0000076d      0x152 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+.debug_info     0x00000000      0x834
+ .debug_info    0x00000000      0x5ad /tmp/ccuu9AQ3.o
+ .debug_info    0x000005ad      0x135 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_info    0x000006e2      0x152 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
-.debug_abbrev   0x00000000      0x445
- .debug_abbrev  0x00000000      0x2c4 /tmp/ccs1irLd.o
- .debug_abbrev  0x000002c4       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
- .debug_abbrev  0x0000037b       0xca /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+.debug_abbrev   0x00000000      0x458
+ .debug_abbrev  0x00000000      0x2d7 /tmp/ccuu9AQ3.o
+ .debug_abbrev  0x000002d7       0xb7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_abbrev  0x0000038e       0xca /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_loclists
-                0x00000000      0x65e
+                0x00000000      0x601
  .debug_loclists
-                0x00000000      0x1d1 /tmp/ccs1irLd.o
+                0x00000000      0x174 /tmp/ccuu9AQ3.o
  .debug_loclists
-                0x000001d1      0x1c6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
+                0x00000174      0x1c6 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .debug_loclists
-                0x00000397      0x2c7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+                0x0000033a      0x2c7 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_aranges  0x00000000       0x80
  .debug_aranges
-                0x00000000       0x40 /tmp/ccs1irLd.o
+                0x00000000       0x40 /tmp/ccuu9AQ3.o
  .debug_aranges
                 0x00000040       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .debug_aranges
                 0x00000060       0x20 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_rnglists
-                0x00000000       0x7a
+                0x00000000       0x49
  .debug_rnglists
-                0x00000000       0x7a /tmp/ccs1irLd.o
+                0x00000000       0x49 /tmp/ccuu9AQ3.o
 
 .debug_macro    0x00000000     0x1558
- .debug_macro   0x00000000       0x96 /tmp/ccs1irLd.o
- .debug_macro   0x00000096      0xaa2 /tmp/ccs1irLd.o
- .debug_macro   0x00000b38       0x22 /tmp/ccs1irLd.o
- .debug_macro   0x00000b5a       0x54 /tmp/ccs1irLd.o
- .debug_macro   0x00000bae       0x24 /tmp/ccs1irLd.o
- .debug_macro   0x00000bd2       0x94 /tmp/ccs1irLd.o
- .debug_macro   0x00000c66       0x43 /tmp/ccs1irLd.o
- .debug_macro   0x00000ca9      0x103 /tmp/ccs1irLd.o
- .debug_macro   0x00000dac       0x3a /tmp/ccs1irLd.o
- .debug_macro   0x00000de6      0x34e /tmp/ccs1irLd.o
- .debug_macro   0x00001134       0x89 /tmp/ccs1irLd.o
- .debug_macro   0x000011bd      0x379 /tmp/ccs1irLd.o
- .debug_macro   0x00001536       0x22 /tmp/ccs1irLd.o
+ .debug_macro   0x00000000       0x96 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000096      0xaa2 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000b38       0x22 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000b5a       0x54 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000bae       0x24 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000bd2       0x94 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000c66       0x43 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000ca9      0x103 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000dac       0x3a /tmp/ccuu9AQ3.o
+ .debug_macro   0x00000de6      0x34e /tmp/ccuu9AQ3.o
+ .debug_macro   0x00001134       0x89 /tmp/ccuu9AQ3.o
+ .debug_macro   0x000011bd      0x379 /tmp/ccuu9AQ3.o
+ .debug_macro   0x00001536       0x22 /tmp/ccuu9AQ3.o
 
-.debug_line     0x00000000      0x75f
- .debug_line    0x00000000      0x3c1 /tmp/ccs1irLd.o
- .debug_line    0x000003c1      0x1bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
- .debug_line    0x0000057e      0x1e1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
+.debug_line     0x00000000      0x6be
+ .debug_line    0x00000000      0x320 /tmp/ccuu9AQ3.o
+ .debug_line    0x00000320      0x1bd /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
+ .debug_line    0x000004dd      0x1e1 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_str      0x00000000     0x4eab
- .debug_str     0x00000000     0x4eab /tmp/ccs1irLd.o
+ .debug_str     0x00000000     0x4eab /tmp/ccuu9AQ3.o
                                0x4efe (size before relaxing)
  .debug_str     0x00004eab      0x1ab /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .debug_str     0x00004eab      0x1c8 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .comment        0x00000000       0x26
- .comment       0x00000000       0x26 /tmp/ccs1irLd.o
+ .comment       0x00000000       0x26 /tmp/ccuu9AQ3.o
                                  0x27 (size before relaxing)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .comment       0x00000026       0x27 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
@@ -193,13 +193,13 @@ LOAD linker stubs
 .ARM.attributes
                 0x00000000       0x2a
  .ARM.attributes
-                0x00000000       0x2a /tmp/ccs1irLd.o
+                0x00000000       0x2a /tmp/ccuu9AQ3.o
  .ARM.attributes
                 0x0000002a       0x2a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .ARM.attributes
                 0x00000054       0x2a /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)
 
 .debug_frame    0x00000000       0xdc
- .debug_frame   0x00000000       0x7c /tmp/ccs1irLd.o
+ .debug_frame   0x00000000       0x7c /tmp/ccuu9AQ3.o
  .debug_frame   0x0000007c       0x30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memset.o)
  .debug_frame   0x000000ac       0x30 /usr/lib/gcc/arm-none-eabi/13.2.1/../../../arm-none-eabi/lib/thumb/nofp/libc_nano.a(libc_a-memcpy-stub.o)

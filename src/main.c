@@ -146,11 +146,8 @@ int main(void){
     setModeGPIO('A', 10, GPIO_MODE_OUTPUT);
     
     static bool on = true;
-    uint32_t prd = 500;
+    uint32_t prd = 2000;
     uint32_t lastTick = s_ticks;
-    writeGPIO('A', 10, 1);
-    while((s_ticks - lastTick) < 5000 ){};
-    writeGPIO('A', 10, 0);
     while(1){
         if(timerExpire(&lastTick, prd, s_ticks)){
             writeGPIO('A', 10, on);
