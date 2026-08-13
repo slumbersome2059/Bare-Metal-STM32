@@ -6,7 +6,7 @@ CFLAGS  ?=  -W -Wall -Wextra -Werror -Wundef -Wshadow -Wdouble-promotion \
 LDFLAGS ?= -Ttools/link.ld -nostartfiles -nostdlib --specs nano.specs -lc -lgcc -Wl,--gc-sections -Wl,-Map=build/firmware.elf.map
 
 
-SOURCES = src/main.c 
+SOURCES = src/main.c  src/startup.c
 
 build: build/firmware.elf
 
